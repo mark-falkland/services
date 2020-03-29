@@ -1,7 +1,6 @@
-import React from "react";
 
-const Services = props => {
-  return <h1>I'm the Services page</h1>;
-};
+import React from 'react'
 
-export default Services;
+const Services = () => <h1>I am Services Page</h1>
+
+export default Services

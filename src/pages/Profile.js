@@ -1,7 +1,6 @@
-import React from "react";
 
-const Profile = props => {
-  return <h1>I'm the Profile page</h1>;
-};
+import React from 'react'
 
-export default Profile;
+const Profile = () => <h1>I am Profile Page</h1>
+
+export default Profile
