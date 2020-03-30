@@ -24,20 +24,19 @@ export const fetchServices = () =>
       return services;
     });
 
-export const fetchUserServices = userId =>
-  db
+export const fetchUserServices = userRef => {
+  return db
     .collection("services")
-    .where("user", "==", userId)
+    .where("user", "==", userRef)
     .get()
     .then(snapshot => {
-      //  debugger;
       const services = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
       }));
-      //  debugger;
       return services;
     });
+};
 
 export const createService = newService => {
   return db
